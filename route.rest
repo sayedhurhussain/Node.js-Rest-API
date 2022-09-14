@@ -1,15 +1,34 @@
+# Index/get subscribers
 GET http://localhost:6000/subscribers
 
 ###
 
-GET http://localhost:6000/subscribers/12
+# Get by id
+GET http://localhost:6000/subscribers/63216d90554e7bcfbf47b870
 
 ###
 
+# Create subscribers
 POST http://localhost:6000/subscribers
 Content-Type: application/json
 
 {
-    "name": "Amazing Person",
+    "name": "Amazing Person one",
     "subscribedToChannel": "Web Sev Simpllified"
+}
+
+###
+
+# Delete Subscribers
+DELETE http://localhost:6000/subscribers/63216d90554e7bcfbf47b870
+
+###
+
+# Updated Subscribers
+PUT http://localhost:6000/subscribers/632173211f870eeacc5738b8
+Content-Type: application/json
+
+{
+    "name": "New Name",
+    "subscribedToChannel": "New Channel"
 }
